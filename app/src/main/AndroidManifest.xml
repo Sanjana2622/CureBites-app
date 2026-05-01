@@ -12,15 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CureBites">
 
-        <!-- Your new page is now the official Start Page! -->
+        <!-- The Start Button is now on the Profile Page! -->
         <activity
-            android:name=".ChatNutritionistActivity"
+            android:name=".ProfileActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ChatNutritionistActivity"
+            android:exported="false" />
 
         <activity
             android:name=".LoginActivity"
@@ -30,10 +34,9 @@
             android:name=".OnboardingActivity"
             android:exported="false" />
 
-        <!-- The Start Button is safely removed from here -->
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="false" />
 
     </application>
 
