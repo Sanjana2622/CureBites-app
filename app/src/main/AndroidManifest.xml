@@ -14,7 +14,25 @@
 
         <!-- The Start Button is now on the Notifications Page! -->
         <activity
-            android:name=".NotificationsActivity"
+            android:name=".MealPlanTuesdayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MealPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealingPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UploadReportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
