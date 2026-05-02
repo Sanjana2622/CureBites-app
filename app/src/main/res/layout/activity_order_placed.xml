@@ -42,7 +42,7 @@
             android:src="@drawable/baseline_check_circle_outline_24"
             android:contentDescription="Confirmed"
             android:layout_gravity="center"
-            app:tint="@color/black" />
+            app:tint="#000000"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:text="Your order is confirmed"
-            android:textColor="@color/black"
+            android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -85,7 +85,7 @@
                 android:paddingLeft="10dp"
                 android:layout_weight="1"
                 android:text="Plan :"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:textSize="16sp"/>
 
@@ -95,7 +95,7 @@
                 android:text="Monthly Meal Plan"
                 android:textStyle="bold"
                 android:paddingRight="10dp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text"
                 android:textSize="16sp"/>
         </LinearLayout>
 
@@ -112,7 +112,7 @@
                 android:layout_weight="1"
                 android:text="Meals/Day :"
                 android:paddingLeft="10dp"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:textSize="16sp"/>
 
@@ -122,7 +122,7 @@
                 android:text="3 Meals"
                 android:textStyle="bold"
                 android:paddingRight="10dp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text"
                 android:textSize="16sp"/>
         </LinearLayout>
 
@@ -137,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Duration :"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:paddingLeft="10dp"
                 android:textSize="16sp"/>
@@ -148,7 +148,7 @@
                 android:text="30 Days"
                 android:textStyle="bold"
                 android:paddingRight="10dp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text"
                 android:textSize="16sp"/>
         </LinearLayout>
 
@@ -164,7 +164,7 @@
                 android:layout_weight="1"
                 android:text="Assigned Doctor :"
                 android:paddingLeft="10dp"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:textSize="16sp"/>
 
@@ -174,7 +174,7 @@
                 android:text="Dr. Reena Shah"
                 android:textStyle="bold"
                 android:paddingRight="10dp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text"
                 android:textSize="16sp"/>
         </LinearLayout>
 
@@ -190,7 +190,7 @@
                 android:layout_weight="1"
                 android:text="Delivered To :"
                 android:paddingLeft="10dp"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:textSize="16sp"/>
 
@@ -200,7 +200,7 @@
                 android:text="Bhiwadi, Rajasthan"
                 android:paddingRight="10dp"
                 android:textStyle="bold"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text"
                 android:textSize="16sp"/>
         </LinearLayout>
 
@@ -216,7 +216,7 @@
                 android:layout_weight="1"
                 android:text="Total Paid :"
                 android:paddingLeft="10dp"
-                android:textColor="@color/black"
+                android:textColor="#000000"
                 android:textStyle="bold"
                 android:textSize="16sp"/>
 
@@ -226,7 +226,7 @@
                 android:text="₹ 2,789"
                 android:textStyle="bold"
                 android:paddingRight="10dp"
-                android:textColor="@color/grey_dark"
+                android:textColor="@color/grey_text"
                 android:textSize="16sp"/>
 
         </LinearLayout>

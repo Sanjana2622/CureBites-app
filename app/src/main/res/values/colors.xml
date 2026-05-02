@@ -4,5 +4,7 @@
     <color name="white">#FFFFFF</color>
     <color name="grey_light">#F5F5F5</color>
     <color name="grey_border">#E0E0E0</color>
+    <color name="black">#070000F</color>
     <color name="grey_text">#757575</color>
+
 </resources>

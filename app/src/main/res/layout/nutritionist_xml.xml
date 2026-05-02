@@ -1,77 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5">
 
-    <!-- ===== HEADER (green bg) ===== -->
+    <!-- TOP BAR -->
     <LinearLayout
-        android:id="@+id/header"
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:background="@color/brand_green"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:paddingTop="3dp"
-        android:paddingBottom="24dp">
+        android:layout_height="56dp"
+        android:background="#2E8B6E"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="16dp">
 
-        <!-- Back arrow -->
         <ImageButton
             android:id="@+id/btnBack"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_gravity="start"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="Back"
-            android:src="@drawable/baseline_arrow_back_24"
+            android:src="@drawable/ic_arrow_back"
             app:tint="#FFFFFF"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <!-- Avatar circle -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="40dp"
-            app:cardElevation="4dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:contentDescription="Doctor avatar"
-                android:src="@drawable/profile_icon"/>
-        </androidx.cardview.widget.CardView>
+            tools:ignore="UseAppTint,TouchTargetSizeCheck" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Dr.Reena Shah"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:text="My Progress"
             android:textColor="#FFFFFF"
-            android:textSize="28sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Chief Nutrionist &amp; Wellness Expert"
-            android:layout_marginTop="5dp"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
-            android:textStyle="bold"/>
-
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- ===== SCROLLABLE BODY ===== -->
+    <!-- SCROLLABLE CONTENT -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="56dp"
         android:layout_marginBottom="60dp"
         android:scrollbars="none">
 
@@ -81,291 +53,553 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- STATS CARD -->
+            <!-- WEIGHT CARD -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="2dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingVertical="16dp">
-
-                    <!-- Patients -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2,400 +"
-                            android:textColor="#1A1A1A"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Patients"
-                            android:textColor="@color/grey_dark"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-
-                    <!-- Divider -->
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="#E0E0E0" />
-
-                    <!-- Experience -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="12 Yrs"
-                            android:textColor="#1A1A1A"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Experience"
-                            android:textColor="@color/grey_dark"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-
-                    <!-- Divider -->
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="#E0E0E0" />
-
-                    <!-- Rating -->
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="4.9"
-                            android:textColor="#1A1A1A"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Rating"
-                            android:textColor="@color/grey_dark"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- ABOUT CARD -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                app:cardElevation="2dp"
                 app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp">
+                tools:ignore="ExtraText">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="16dp">
+                    android:padding="18dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <!-- TOP ROW -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:lineSpacingExtra="3dp"
-                        android:text="Dr.Reena Shah is a certified clinical nutritionist with 12 years of experience helping patients heal through food. She specialises in therapeutic nutrition, gut health, and diabetes management."
-                        android:textColor="#555555"
-                        android:textSize="16sp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
 
-                    <!-- Tags -->
+                        <!-- WEIGHT -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:gravity="bottom">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="68"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:textSize="36sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" Kg"
+                                android:textColor="#8E8E8E"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="4dp"/>
+
+                        </LinearLayout>
+
+                        <!-- THIS MONTH -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="This Month"
+                            android:textColor="#00A86B"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:background="@drawable/tag_bg"
+                            android:paddingHorizontal="14dp"
+                            android:paddingVertical="6dp"/>
+
+                    </LinearLayout>
+
+                    <!-- SECOND ROW -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="14dp">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
+                            android:text="4kg"
+                            android:textColor="#00A86B"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
                             android:background="@drawable/tag_bg"
-                            android:paddingHorizontal="14dp"
-                            android:paddingVertical="6dp"
-                            android:text="Gut Health"
-                            android:textColor="#2E8B6E"
-                            android:textSize="16sp" />
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="5dp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="8dp"
-                            android:background="@drawable/tag_bg"
-                            android:paddingHorizontal="14dp"
-                            android:paddingVertical="6dp"
-                            android:text="Diabetes"
-                            android:textColor="#2E8B6E"
-                            android:textSize="16sp" />
+                            android:text="since you started"
+                            android:textColor="@color/grey_text"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/tag_bg"
-                            android:paddingHorizontal="14dp"
-                            android:paddingVertical="6dp"
-                            android:text="PCOS"
-                            android:textColor="#2E8B6E"
-                            android:textSize="16sp" />
                     </LinearLayout>
+
+                    <!-- GRAPH -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        android:layout_marginTop="26dp"
+                        android:weightSum="6">
+
+                        <!-- W1 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="45dp"
+                                android:background="#E3EEE8"/>
+
+                            <TextView
+                                android:text="w1"
+                                android:textSize="14sp"
+                                android:textColor="@color/grey_text"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <!-- W2 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="58dp"
+                                android:background="#D7E4DD"/>
+
+                            <TextView
+                                android:text="w2"
+                                android:textSize="14sp"
+                                android:textColor="@color/grey_text"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <!-- W3 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="42dp"
+                                android:background="#DCE7E1"/>
+
+                            <TextView
+                                android:text="w3"
+                                android:textSize="14sp"
+                                android:textColor="@color/grey_text"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <!-- W4 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="82dp"
+                                android:background="#00A86B"/>
+
+                            <TextView
+                                android:text="w4"
+                                android:textSize="14sp"
+                                android:textColor="@color/grey_text"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <!-- W5 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="50dp"
+                                android:background="#DCE7E1"/>
+
+                            <TextView
+                                android:text="w5"
+                                android:textSize="14sp"
+                                android:textColor="@color/grey_text"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <!-- W6 -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <View
+                                android:layout_width="30dp"
+                                android:layout_height="88dp"
+                                android:background="#00A86B"/>
+
+                            <TextView
+                                android:text="w6"
+                                android:textSize="14sp"
+                                android:textColor="@color/grey_text"
+                                android:layout_marginTop="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
-            <!-- SLOTS CARD -->
+            <!-- METRICS ROW (Water + Calories) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Water Intake -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💧"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Water Intake"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey_text"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2.4 L"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:layout_marginTop="2dp" />
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:progress="80"
+                            android:progressTint="#2E8B6E"
+                            android:progressBackgroundTint="#E0E0E0"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Calories Today -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔥"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calories Today"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey_text"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1,670"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:layout_marginTop="2dp" />
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:progress="55"
+                            android:progressTint="#FFC107"
+                            android:progressBackgroundTint="#E0E0E0"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- METRICS ROW (Meals + Sleep) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Meals Logged -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🥗"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Meals logged"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey_text"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4/5"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:layout_marginTop="2dp" />
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:progress="80"
+                            android:progressTint="#FF7043"
+                            android:progressBackgroundTint="#E0E0E0"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Sleep Quality -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="😴"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sleep Quality"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey_text"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7.5h"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A1A1A"
+                            android:layout_marginTop="2dp" />
+
+                        <ProgressBar
+                            android:layout_width="match_parent"
+                            android:layout_height="6dp"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:progress="62"
+                            android:progressTint="#9E9E9E"
+                            android:progressBackgroundTint="#E0E0E0"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- STREAK BANNER -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                app:cardBackgroundColor="#FFFFFF"
                 app:cardCornerRadius="16dp"
-                app:cardElevation="2dp">
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#2E8B6E">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:padding="16dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
-                        android:text="Available slots - Today"
-                        android:textColor="#1A1A1A"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-                    <!-- Row 1 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true">
 
                         <TextView
-                            android:id="@+id/slot1"
-                            android:layout_width="0dp"
-                            android:layout_height="38dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/tag_bg"
-                            android:gravity="center"
-                            android:text="9:00 AM"
-                            android:textColor="@color/grey_dark"
-                            android:textSize="14sp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🔥"
+                            android:textSize="28sp" />
 
-                        <TextView
-                            android:id="@+id/slot2"
-                            android:layout_width="0dp"
-                            android:layout_height="38dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/tag_bg"
-                            android:gravity="center"
-                            android:text="10:30 AM"
-                            android:textColor="#2E8B6E"
-                            android:textSize="14sp" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
 
-                        <TextView
-                            android:id="@+id/slot3"
-                            android:layout_width="0dp"
-                            android:layout_height="38dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/tag_bg"
-                            android:gravity="center"
-                            android:text="12:00 PM"
-                            android:textColor="@color/grey_dark"
-                            android:textSize="14sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="On a Roll !"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:textColor="#FFFFFF" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="You have followed your meal plan\nconsistently. Keep it up !"
+                                android:textSize="14sp"
+                                android:textColor="#CCFFFFFF"
+                                android:layout_marginTop="2dp" />
+                        </LinearLayout>
                     </LinearLayout>
 
-                    <!-- Row 2 -->
+                    <!-- Day Streak -->
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true">
 
                         <TextView
-                            android:id="@+id/slot4"
-                            android:layout_width="0dp"
-                            android:layout_height="38dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/tag_bg"
-                            android:gravity="center"
-                            android:text="2:00 PM"
-                            android:textColor="#2E8B6E"
-                            android:textSize="14sp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="14"
+                            android:textSize="36sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:gravity="center" />
 
                         <TextView
-                            android:id="@+id/slot5"
-                            android:layout_width="0dp"
-                            android:layout_height="38dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/tag_bg"
-                            android:gravity="center"
-                            android:text="3:30 PM"
-                            android:textColor="@color/grey_dark"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:id="@+id/slot6"
-                            android:layout_width="0dp"
-                            android:layout_height="38dp"
-                            android:layout_weight="1"
-                            android:background="@drawable/tag_bg"
-                            android:gravity="center"
-                            android:text="5:00 PM"
-                            android:textColor="#2E8B6E"
-                            android:textSize="14sp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Day Streak"
+                            android:textSize="11sp"
+                            android:textColor="#CCFFFFFF"
+                            android:gravity="center" />
                     </LinearLayout>
-                </LinearLayout>
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-
-            <!-- ── PATIENT REVIEWS CARD ── -->
+            <!-- HEALTH GOALS -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
                 app:cardBackgroundColor="#FFFFFF">
@@ -379,88 +613,25 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Patient Reviews"
+                        android:text="Health Goals Progress"
                         android:textSize="15sp"
                         android:textStyle="bold"
                         android:textColor="#1A1A1A"
-                        android:layout_marginBottom="14dp" />
+                        android:layout_marginBottom="16dp" />
 
-                    <!-- Review 1 — Priya R. -->
+                    <!-- Weight Loss Goal -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:layout_marginBottom="12dp">
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
 
                         <TextView
-                            android:layout_width="42dp"
-                            android:layout_height="42dp"
-                            android:gravity="center"
-                            android:text="PR"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            android:textColor="#FFFFFF"
-                            android:background="@drawable/profile_icon" />
-
-                        <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="vertical"
-                            android:layout_marginStart="10dp"
-                            tools:ignore="ExtraText">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Priya R."
-                                    android:textSize="16sp"
-                                    android:textStyle="bold"
-                                    android:textColor="#1A1A1A"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentEnd="true"
-                                    android:text="★★★★★"
-                                    android:textSize="13sp"
-                                    android:textColor="#FFC107"/>
-                            </RelativeLayout>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Dr.Reenas plan completely reversed my pre-diabetes in just 3 months."
-                                android:textSize="14sp"
-                                android:textColor="@color/grey_dark"
-                                android:layout_marginTop="3dp"
-                                tools:ignore="MissingPrefix" />
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#F0F0F0"
-                        android:layout_marginBottom="12dp"/>
-
-                    <!-- Review 2 — Arjun M. -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="42dp"
-                            android:layout_height="42dp"
-                            android:gravity="center"
-                            android:text="AM"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            android:textColor="#FFFFFF"
-                            android:background="@drawable/profile_icon" />
+                            android:text="⚖️"
+                            android:textSize="20sp" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -469,54 +640,181 @@
                             android:orientation="vertical"
                             android:layout_marginStart="10dp">
 
-                            <RelativeLayout
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Weight Loss (Target : 65kg)"
+                                android:textSize="13sp"
+                                android:textColor="#333333"
+                                android:layout_marginBottom="4dp" />
+
+                            <ProgressBar
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Arjun M."
-                                    android:textSize="16sp"
-                                    android:textStyle="bold"
-                                    android:textColor="#1A1A1A"/>
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentEnd="true"
-                                    android:text="★★★★"
-                                    android:textSize="13sp"
-                                    android:textColor="#FFC107"/>
-                            </RelativeLayout>
+                                android:layout_height="8dp"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:progress="57"
+                                android:progressTint="#2E8B6E"
+                                android:progressBackgroundTint="#E8E8E8" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="57 %"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E8B6E"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <!-- Immunity Boost Goal -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="💪"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Very patient, thorough and her meal plans actually taste great."
-                                android:textSize="14sp"
-                                android:textColor="@color/grey_dark"
-                                android:layout_marginTop="3dp" />
+                                android:text="Immunity Boost"
+                                android:textSize="13sp"
+                                android:textColor="#333333"
+                                android:layout_marginBottom="4dp" />
+
+                            <ProgressBar
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:progress="75"
+                                android:progressTint="#2E8B6E"
+                                android:progressBackgroundTint="#E8E8E8" />
                         </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="75 %"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E8B6E"
+                            android:layout_marginStart="10dp" />
+                    </LinearLayout>
+
+                    <!-- Heart Health Goal -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="❤️"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Heart Health"
+                                android:textSize="13sp"
+                                android:textColor="#333333"
+                                android:layout_marginBottom="4dp" />
+
+                            <ProgressBar
+                                android:layout_width="match_parent"
+                                android:layout_height="8dp"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:progress="40"
+                                android:progressTint="#2E8B6E"
+                                android:progressBackgroundTint="#E8E8E8" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="40 %"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#2E8B6E"
+                            android:layout_marginStart="10dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-
-            <!-- CHAT BUTTON -->
-            <Button
-                android:id="@+id/btnChat"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginBottom="8dp"
-                android:backgroundTint="@color/brand_green"
-                android:text="Chat with Nutritionist"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
         </LinearLayout>
-
-
     </ScrollView>
 
+    <!-- BOTTOM NAV BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="horizontal">
+
+        <LinearLayout android:id="@+id/navHome"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:background="?attr/selectableItemBackground">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🏠" android:textSize="20sp" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Home" android:textSize="10sp" android:textColor="#AAAAAA"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navPlans"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:background="?attr/selectableItemBackground">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="🥗" android:textSize="20sp" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Plans" android:textSize="10sp" android:textColor="#AAAAAA"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navProgress"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:background="?attr/selectableItemBackground">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="📊" android:textSize="20sp" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Progress" android:textSize="10sp" android:textColor="#2E8B6E" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navProfile"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:background="?attr/selectableItemBackground">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="👤" android:textSize="20sp" android:gravity="center"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Profile" android:textSize="10sp" android:textColor="#AAAAAA"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
