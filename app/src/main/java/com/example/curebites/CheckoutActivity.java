@@ -15,11 +15,6 @@ public class CheckoutActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) getSupportActionBar().hide();
 
         Button btnPay = findViewById(R.id.btnPay);
-        btnPay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(CheckoutActivity.this, "Processing Secure Payment...", Toast.LENGTH_SHORT).show();
-            }
-        });
+        btnPay.setOnClickListener(v -> Toast.makeText(CheckoutActivity.this, "Processing Secure Payment...", Toast.LENGTH_SHORT).show());
     }
 }
