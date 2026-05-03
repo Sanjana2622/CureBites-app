@@ -1,7 +1,7 @@
 package com.example.curebites;
 
 import android.os.Bundle;
-import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 class MyProgressActivity extends AppCompatActivity {
@@ -9,7 +9,7 @@ class MyProgressActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_myprogress);
+        setContentView(R.layout.activity_nutritionist);
 
         // Back arrow click
         findViewById(R.id.btnBack).setOnClickListener(v -> finish());
