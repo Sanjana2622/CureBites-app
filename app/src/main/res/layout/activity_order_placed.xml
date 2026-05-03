@@ -232,10 +232,10 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/trackBtn"
             android:layout_gravity="center"
             android:backgroundTint="#0F8A5F"
             android:text="Track my order  ->"
-            android:clickable="true"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:textSize="20sp"

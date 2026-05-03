@@ -30,6 +30,7 @@
 
                 <!-- Back Arrow -->
                 <ImageView
+                    android:id="@+id/ivBack"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:src="@android:drawable/ic_menu_revert"

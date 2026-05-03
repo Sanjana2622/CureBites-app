@@ -53,6 +53,11 @@ public class MealPlanActivity extends AppCompatActivity {
 
         // ── Bind all meal TextViews to their XML IDs ───────────────
         bindMealViews();
+        // Tapping "Oats with berries" row opens MealDetailsActivity
+        findViewById(R.id.llBreakfast1).setOnClickListener(v -> {
+            Intent intent = new Intent(this, MealDetailsActivity.class);
+            startActivity(intent);
+        });
 
         // ── Set up day tabs ────────────────────────────────────────
         setupDayTabs();
@@ -63,12 +68,12 @@ public class MealPlanActivity extends AppCompatActivity {
         // ── Load Monday meals into the cards ──────────────────────
         loadMondayMeals();
 
-        // ── Subscribe button ───────────────────────────────────────
+        // Subscribe button → opens CartActivity
         Button btnSubscribe = findViewById(R.id.btnSubscribe);
-        btnSubscribe.setOnClickListener(v ->
-                Toast.makeText(this,
-                        "Subscribed to Monthly Meal Plan!",
-                        Toast.LENGTH_SHORT).show());
+        btnSubscribe.setOnClickListener(v -> {
+            Intent intent = new Intent(this, CartActivity.class);
+            startActivity(intent);
+        });
 
         // ── Bottom navigation ──────────────────────────────────────
         setupBottomNav();

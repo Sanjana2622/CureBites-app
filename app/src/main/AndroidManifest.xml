@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.example.curebites">
 
     <application
         android:allowBackup="true"
@@ -12,25 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CureBites">
 
-        <!-- The Start Button is now on the Notifications Page! -->
-        <activity
-            android:name=".MealPlanTuesdayActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MealPlanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HealingPlanActivity"
-            android:exported="false" />
-        <activity
-            android:name=".UploadReportActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".OnboardingActivity"
-            android:exported="false" />
+        <!-- LAUNCHER (ONLY ONE) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -40,45 +22,34 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".OrderHistoryActivity"
-            android:exported="false" />
+        <!-- Onboarding & Login -->
+        <activity android:name=".LoginActivity" android:exported="false" />
+        <activity android:name=".OnboardingActivity" android:exported="false" />
+        <activity android:name=".Onboarding2Activity" android:exported="false" />
+        <activity android:name=".Onboarding3Activity" android:exported="false" />
+        <activity android:name=".TellUsActivity" android:exported="false" />
+        <activity android:name=".HomeActivity" android:exported="false"/>
 
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="false" />
+        <!-- Core App Screens -->
+        <activity android:name=".HealingPlanActivity" android:exported="false" />
+        <activity android:name=".MealPlanActivity" android:exported="false" />
+        <activity android:name=".MealPlanTuesdayActivity" android:exported="false" />
+        <activity android:name=".MealDetailsActivity" android:exported="false" />
 
-        <activity
-            android:name=".ChatNutritionistActivity"
-            android:exported="false" />
+        <!-- Features -->
+        <activity android:name=".UploadReportActivity" android:exported="false" />
+        <activity android:name=".NutritionistActivity"/>
+        <activity android:name=".ChatNutritionistActivity" android:exported="false" />
+        <activity android:name=".NotificationsActivity" android:exported="false" />
+        <activity android:name=".ProfileActivity" android:exported="false" />
+        <activity android:name=".MyprogressActivity" android:exported="false" />
+        <activity android:name=".OrderHistoryActivity" android:exported="false" />
 
-        <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".OnboardingActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-
-
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".MealDetailsActivity" />
-
-        <activity android:name=".CartActivity" />
-
-        <activity android:name=".CheckoutActivity" />
+        <!-- Cart & Order Flow -->
+        <activity android:name=".CartActivity" android:exported="false" />
+        <activity android:name=".CheckoutActivity" android:exported="false" />
+        <activity android:name=".OrderPlacedActivity" android:exported="false" />
+        <activity android:name=".OrderTrackingActivity" android:exported="false" />
 
     </application>
 

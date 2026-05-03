@@ -1,25 +1,17 @@
 package com.example.curebites;
 
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-class MyProgressActivity extends AppCompatActivity {
+public class MyprogressActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nutritionist);
+        setContentView(R.layout.activity_myprogress);
 
-        // Back arrow click
+        // Back arrow → finish() closes this screen
+        // and automatically returns to HomeActivity
         findViewById(R.id.btnBack).setOnClickListener(v -> finish());
-
-        // Bottom nav clicks (stub)
-        int[] navIds = {R.id.navHome, R.id.navPlans, R.id.navProgress, R.id.navProfile};
-        for (int id : navIds) {
-            findViewById(id).setOnClickListener(v -> {
-                // Handle navigation here
-            });
-        }
     }
 }

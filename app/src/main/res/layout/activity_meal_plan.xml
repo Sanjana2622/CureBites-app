@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Layout for the "Monthly Meal Plan" detail screen.
-    Structure:
-    - Hero food image at top with cart icon
-    - Plan title + subtitle overlay
-    - Stats row (calories, days, meals, rating)
-    - Day selector (Mon to Fri tabs)
-    - Meal cards (Breakfast, Lunch, Dinner)
-    - "Subscribe to This Plan" button
-    - Bottom navigation bar
--->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -29,16 +18,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- ══════════════════════════════════
-                 HERO IMAGE SECTION
-                 Food photo at the top with cart
-                 icon overlaid on top right
-            ══════════════════════════════════ -->
+            <!-- HERO IMAGE SECTION -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
 
-                <!-- Background food image -->
                 <ImageView
                     android:id="@+id/ivHeroFood"
                     android:layout_width="match_parent"
@@ -47,13 +31,11 @@
                     android:scaleType="centerCrop"
                     android:contentDescription="Food hero image" />
 
-                <!-- Dark overlay so text is readable -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="#44000000" />
 
-                <!-- Cart icon on top right -->
                 <ImageView
                     android:id="@+id/ivCart"
                     android:layout_width="40dp"
@@ -68,7 +50,6 @@
                     android:focusable="true"
                     android:background="?attr/selectableItemBackgroundBorderless" />
 
-                <!-- Plan title + subtitle at bottom of image -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -85,7 +66,6 @@
                         android:textSize="22sp"
                         android:textStyle="bold" />
 
-                    <!-- Subtitle with dots between items -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -97,10 +77,7 @@
 
             </FrameLayout>
 
-            <!-- ══════════════════════════════════
-                 STATS ROW
-                 Shows: Cal/Day | Days | Meals | Rating
-            ══════════════════════════════════ -->
+            <!-- STATS ROW -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -111,14 +88,12 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp">
 
-                <!-- Stat 1: Calories -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -126,7 +101,6 @@
                         android:textColor="#1B5E20"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -135,20 +109,14 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Vertical divider -->
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="36dp"
-                    android:background="#E0E0E0" />
+                <View android:layout_width="1dp" android:layout_height="36dp" android:background="#E0E0E0" />
 
-                <!-- Stat 2: Days -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,7 +124,6 @@
                         android:textColor="#1B5E20"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -165,20 +132,14 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Vertical divider -->
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="36dp"
-                    android:background="#E0E0E0" />
+                <View android:layout_width="1dp" android:layout_height="36dp" android:background="#E0E0E0" />
 
-                <!-- Stat 3: Meals -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -186,7 +147,6 @@
                         android:textColor="#1B5E20"
                         android:textSize="18sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -195,27 +155,19 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Vertical divider -->
-                <View
-                    android:layout_width="1dp"
-                    android:layout_height="36dp"
-                    android:background="#E0E0E0" />
+                <View android:layout_width="1dp" android:layout_height="36dp" android:background="#E0E0E0" />
 
-                <!-- Stat 4: Rating with star emoji -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
                     android:gravity="center">
-
-                    <!-- Rating number + star emoji side by side -->
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -223,8 +175,6 @@
                             android:textColor="#1B5E20"
                             android:textSize="18sp"
                             android:textStyle="bold" />
-
-                        <!-- Star emoji directly in text -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -232,7 +182,6 @@
                             android:textSize="14sp"
                             android:layout_marginStart="2dp" />
                     </LinearLayout>
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -243,10 +192,7 @@
 
             </LinearLayout>
 
-            <!-- ══════════════════════════════════
-                 DAY SELECTOR TABS
-                 Mon(selected/green) Tue Wed Thu Fri
-            ══════════════════════════════════ -->
+            <!-- DAY SELECTOR TABS -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -257,7 +203,6 @@
                 android:paddingBottom="8dp"
                 android:gravity="center">
 
-                <!-- Day 1: Monday — ACTIVE (green background) -->
                 <LinearLayout
                     android:id="@+id/tabMon"
                     android:layout_width="0dp"
@@ -269,7 +214,6 @@
                     android:layout_marginEnd="6dp"
                     android:clickable="true"
                     android:focusable="true">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -277,7 +221,6 @@
                         android:textColor="#FFFFFF"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -286,7 +229,6 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Day 2: Tuesday -->
                 <LinearLayout
                     android:id="@+id/tabTue"
                     android:layout_width="0dp"
@@ -298,7 +240,6 @@
                     android:layout_marginEnd="6dp"
                     android:clickable="true"
                     android:focusable="true">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -306,7 +247,6 @@
                         android:textColor="#333333"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -315,7 +255,6 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Day 3: Wednesday -->
                 <LinearLayout
                     android:id="@+id/tabWed"
                     android:layout_width="0dp"
@@ -327,7 +266,6 @@
                     android:layout_marginEnd="6dp"
                     android:clickable="true"
                     android:focusable="true">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -335,7 +273,6 @@
                         android:textColor="#333333"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -344,7 +281,6 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Day 4: Thursday -->
                 <LinearLayout
                     android:id="@+id/tabThu"
                     android:layout_width="0dp"
@@ -356,7 +292,6 @@
                     android:layout_marginEnd="6dp"
                     android:clickable="true"
                     android:focusable="true">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -364,7 +299,6 @@
                         android:textColor="#333333"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -373,7 +307,6 @@
                         android:textSize="11sp" />
                 </LinearLayout>
 
-                <!-- Day 5: Friday -->
                 <LinearLayout
                     android:id="@+id/tabFri"
                     android:layout_width="0dp"
@@ -384,7 +317,6 @@
                     android:background="@drawable/bg_day_inactive"
                     android:clickable="true"
                     android:focusable="true">
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -392,7 +324,6 @@
                         android:textColor="#333333"
                         android:textSize="15sp"
                         android:textStyle="bold" />
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -403,10 +334,7 @@
 
             </LinearLayout>
 
-            <!-- ══════════════════════════════════
-                 MEAL CARDS CONTAINER
-                 Breakfast / Lunch / Dinner
-            ══════════════════════════════════ -->
+            <!-- MEAL CARDS CONTAINER -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -415,9 +343,7 @@
                 android:paddingEnd="12dp"
                 android:paddingBottom="16dp">
 
-                <!-- ─────────────────────────────
-                     BREAKFAST CARD
-                ───────────────────────────── -->
+                <!-- BREAKFAST CARD -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -426,7 +352,7 @@
                     android:padding="12dp"
                     android:layout_marginBottom="12dp">
 
-                    <!-- Meal type header row -->
+                    <!-- Breakfast header -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -434,7 +360,6 @@
                         android:gravity="center_vertical"
                         android:layout_marginBottom="10dp">
 
-                        <!-- "Breakfast" label with green pill background -->
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -448,8 +373,9 @@
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp" />
 
-                        <!-- Time range -->
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvBreakfastTime"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="  7:00 - 8:30 am"
@@ -457,24 +383,30 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <!-- Breakfast item 1: Oats with berries -->
+                    <!-- Breakfast item 1: Oats with berries — clickable -->
                     <LinearLayout
+                        android:id="@+id/llBreakfast1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground"
                         android:layout_marginBottom="8dp">
 
-                        <!-- Food emoji acts as icon -->
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvBreakfast1Emoji"
                             android:layout_width="44dp"
                             android:layout_height="44dp"
                             android:text="🫐"
                             android:textSize="26sp"
                             android:gravity="center" />
 
-                        <!-- Food name -->
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvBreakfast1Name"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -484,8 +416,9 @@
                             android:textStyle="bold"
                             android:layout_marginStart="8dp" />
 
-                        <!-- Calorie count in green -->
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvBreakfast1Cal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="320 cal"
@@ -494,7 +427,6 @@
                             android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!-- Thin divider between items -->
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -508,15 +440,18 @@
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
 
-                        <!-- Milk carton emoji -->
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvBreakfast2Emoji"
                             android:layout_width="44dp"
                             android:layout_height="44dp"
                             android:text="🥛"
                             android:textSize="26sp"
                             android:gravity="center" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvBreakfast2Name"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -526,7 +461,9 @@
                             android:textStyle="bold"
                             android:layout_marginStart="8dp" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvBreakfast2Cal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="60 cal"
@@ -537,9 +474,7 @@
 
                 </LinearLayout>
 
-                <!-- ─────────────────────────────
-                     LUNCH CARD
-                ───────────────────────────── -->
+                <!-- LUNCH CARD -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -548,7 +483,6 @@
                     android:padding="12dp"
                     android:layout_marginBottom="12dp">
 
-                    <!-- Lunch header -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -569,7 +503,9 @@
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvLunchTime"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="  12:30 - 2:00 pm"
@@ -577,22 +513,25 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <!-- Lunch item: Quinoa Bowl -->
+                    <!-- Lunch item -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
 
-                        <!-- Bowl emoji -->
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvLunchEmoji"
                             android:layout_width="44dp"
                             android:layout_height="44dp"
                             android:text="🥗"
                             android:textSize="26sp"
                             android:gravity="center" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvLunchName"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -602,7 +541,9 @@
                             android:textStyle="bold"
                             android:layout_marginStart="8dp" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvLunchCal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="480 cal"
@@ -613,9 +554,7 @@
 
                 </LinearLayout>
 
-                <!-- ─────────────────────────────
-                     DINNER CARD
-                ───────────────────────────── -->
+                <!-- DINNER CARD -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -624,7 +563,6 @@
                     android:padding="12dp"
                     android:layout_marginBottom="12dp">
 
-                    <!-- Dinner header -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -645,7 +583,9 @@
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvDinnerTime"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="  7:00 - 8:30 pm"
@@ -653,22 +593,25 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <!-- Dinner item: Moong Dal and Brown Rice -->
+                    <!-- Dinner item -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
                         android:gravity="center_vertical">
 
-                        <!-- Dal emoji -->
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvDinnerEmoji"
                             android:layout_width="48dp"
                             android:layout_height="44dp"
                             android:gravity="center"
                             android:text="🍛"
                             android:textSize="26sp" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvDinnerName"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -678,7 +621,9 @@
                             android:textStyle="bold"
                             android:layout_marginStart="8dp" />
 
+                        <!-- ✅ ID added -->
                         <TextView
+                            android:id="@+id/tvDinnerCal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="520 cal"
@@ -693,7 +638,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- ── SUBSCRIBE BUTTON ── -->
+    <!-- SUBSCRIBE BUTTON -->
     <Button
         android:id="@+id/btnSubscribe"
         android:layout_width="match_parent"
@@ -709,7 +654,7 @@
         android:backgroundTint="#1B5E20"
         android:stateListAnimator="@null" />
 
-    <!-- ── BOTTOM NAVIGATION BAR ── -->
+    <!-- BOTTOM NAVIGATION BAR -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -717,7 +662,6 @@
         android:background="#FFFFFF"
         android:elevation="8dp">
 
-        <!-- Home tab -->
         <LinearLayout
             android:id="@+id/tabHome"
             android:layout_width="0dp"
@@ -727,13 +671,11 @@
             android:gravity="center"
             android:clickable="true"
             android:focusable="true">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🏠"
                 android:textSize="20sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -743,7 +685,6 @@
                 android:layout_marginTop="2dp" />
         </LinearLayout>
 
-        <!-- Plans tab -->
         <LinearLayout
             android:id="@+id/tabPlans"
             android:layout_width="0dp"
@@ -753,13 +694,11 @@
             android:gravity="center"
             android:clickable="true"
             android:focusable="true">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🥗"
                 android:textSize="20sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -770,7 +709,6 @@
                 android:layout_marginTop="2dp" />
         </LinearLayout>
 
-        <!-- Progress tab -->
         <LinearLayout
             android:id="@+id/tabProgress"
             android:layout_width="0dp"
@@ -780,13 +718,11 @@
             android:gravity="center"
             android:clickable="true"
             android:focusable="true">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="📊"
                 android:textSize="20sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -796,7 +732,6 @@
                 android:layout_marginTop="2dp" />
         </LinearLayout>
 
-        <!-- Profile tab -->
         <LinearLayout
             android:id="@+id/tabProfile"
             android:layout_width="0dp"
@@ -806,13 +741,11 @@
             android:gravity="center"
             android:clickable="true"
             android:focusable="true">
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="👤"
                 android:textSize="20sp" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

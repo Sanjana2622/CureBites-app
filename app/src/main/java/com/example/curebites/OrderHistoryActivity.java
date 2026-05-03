@@ -8,7 +8,10 @@ public class OrderHistoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // This links the Java to your XML layout
         setContentView(R.layout.activity_order_history);
+
+        // Back arrow → finish() closes this screen
+        // and automatically returns to HomeActivity
+        findViewById(R.id.tvBack).setOnClickListener(v -> finish());
     }
 }

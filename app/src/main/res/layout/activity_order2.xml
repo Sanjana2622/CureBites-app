@@ -263,12 +263,14 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/callBtn"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:src="@android:drawable/ic_menu_call"
                 app:tint="#000000" />
 
             <ImageView
+                android:id="@+id/msgBtn"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_marginStart="16dp"

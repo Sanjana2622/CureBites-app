@@ -176,6 +176,7 @@
                                     android:layout_height="wrap_content"/>
 
                                 <TextView
+                                    android:id="@+id/tvAgeValue"
                                     android:text="28 "
                                     android:textColor="#009966"
                                     android:textStyle="bold"
@@ -192,6 +193,7 @@
                             </LinearLayout>
 
                             <SeekBar
+                                android:id="@+id/seekAge"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:progress="28"/>
@@ -226,6 +228,7 @@
                                     android:layout_height="wrap_content"/>
 
                                 <TextView
+                                    android:id="@+id/tvWeightValue"
                                     android:text="72 "
                                     android:textColor="#009966"
                                     android:textStyle="bold"
@@ -242,6 +245,7 @@
                             </LinearLayout>
 
                             <SeekBar
+                                android:id="@+id/seekWeight"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:progress="72"/>
@@ -276,6 +280,7 @@
                                     android:layout_height="wrap_content"/>
 
                                 <TextView
+                                    android:id="@+id/tvHeightValue"
                                     android:text="172 "
                                     android:textColor="#009966"
                                     android:textStyle="bold"
@@ -292,6 +297,7 @@
                             </LinearLayout>
 
                             <SeekBar
+                                android:id="@+id/seekHeight"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:progress="85"/>
@@ -355,6 +361,7 @@
 
                     <!-- CONTINUE -->
                     <Button
+                        android:id="@+id/btnContinue"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:text="Continue →"

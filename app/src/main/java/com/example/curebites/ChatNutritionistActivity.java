@@ -1,5 +1,6 @@
 package com.example.curebites;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +9,13 @@ public class ChatNutritionistActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // This simply loads your new layout without the edge-to-edge crashing code
         setContentView(R.layout.activity_chat_nutritionist);
+
+        // Back arrow → returns to HomeActivity
+        findViewById(R.id.tvBack).setOnClickListener(v -> {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        });
     }
 }

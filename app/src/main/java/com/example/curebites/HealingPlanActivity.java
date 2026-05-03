@@ -17,8 +17,9 @@ import androidx.appcompat.app.AppCompatActivity;
  *   3. Weekly Plan     – all meals for 7 days
  *   4. Monthly Plan    – all meals for 30 days
  *
- * Each plan has a "Get Started" button.
- * The bottom nav bar switches between Home / Plans / Progress / Profile.
+ * Back arrow → returns to HomeActivity
+ * Get Started buttons → opens MealPlanActivity
+ * Bottom nav → connects to all main screens
  */
 public class HealingPlanActivity extends AppCompatActivity {
 
@@ -27,19 +28,20 @@ public class HealingPlanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_healing_plan);
 
-        // ── Back arrow ──────────────────────────────────────────────
-        // Goes back to the previous screen
-        findViewById(R.id.ivBack).setOnClickListener(v -> finish());
+        // ── Back arrow ─────────────────────────────────────────────
+        // Returns to HomeActivity
+        findViewById(R.id.ivBack).setOnClickListener(v -> {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        });
 
-        // ── Cart icon ───────────────────────────────────────────────
-        // TODO: navigate to CartActivity when built
+        // ── Cart icon ──────────────────────────────────────────────
         findViewById(R.id.ivCart).setOnClickListener(v ->
                 Toast.makeText(this, "Cart coming soon!", Toast.LENGTH_SHORT).show());
 
-        // ── Plan buttons ────────────────────────────────────────────
-        // Each button calls the same helper with a different plan name.
-        // Later you can navigate to an order/detail screen instead.
-
+        // ── Plan buttons ───────────────────────────────────────────
+        // All 4 buttons open MealPlanActivity with the plan name
         Button btnTrial = findViewById(R.id.btnTrial);
         btnTrial.setOnClickListener(v -> onPlanSelected("Trial Pack"));
 
@@ -52,15 +54,15 @@ public class HealingPlanActivity extends AppCompatActivity {
         Button btnMonthly = findViewById(R.id.btnMonthly);
         btnMonthly.setOnClickListener(v -> onPlanSelected("Monthly Plan"));
 
-        // ── Bottom navigation bar ───────────────────────────────────
+        // ── Bottom navigation bar ──────────────────────────────────
         setupBottomNav();
     }
 
     /**
      * onPlanSelected(planName)
      *
-     * Called when the user taps "Get Started" on any plan card.
-     * Currently shows a toast — replace with navigation to the next screen.
+     * Called when user taps "Get Started" on any plan card.
+     * Navigates to MealPlanActivity and passes the plan name.
      *
      * @param planName  The name of the selected plan (e.g. "Weekly Plan")
      */
@@ -73,37 +75,35 @@ public class HealingPlanActivity extends AppCompatActivity {
     /**
      * setupBottomNav()
      *
-     * Wires up the 4 bottom navigation tabs.
-     * "Plans" is the active tab on this screen (already highlighted green in XML).
+     * Wires all 4 bottom navigation tabs with real navigation.
+     * "Plans" tab is active on this screen.
      */
     private void setupBottomNav() {
 
-        // Home tab → go to HomeActivity
+        // Home tab → goes to HomeActivity
         LinearLayout tabHome = findViewById(R.id.tabHome);
         tabHome.setOnClickListener(v -> {
-            // TODO: replace with your actual HomeActivity
-            // startActivity(new Intent(this, HomeActivity.class));
-            Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+            finish();
         });
 
-        // Plans tab → already here, do nothing (or refresh)
+        // Plans tab → already here, do nothing
         LinearLayout tabPlans = findViewById(R.id.tabPlans);
-        tabPlans.setOnClickListener(v -> {
-            // Already on this screen — no action needed
-        });
+        tabPlans.setOnClickListener(v -> { });
 
-        // Progress tab → go to ProgressActivity
+        // Progress tab → goes to MyProgressActivity
         LinearLayout tabProgress = findViewById(R.id.tabProgress);
         tabProgress.setOnClickListener(v -> {
-            // TODO: replace with your actual ProgressActivity
-            Toast.makeText(this, "Progress", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MyprogressActivity.class);
+            startActivity(intent);
         });
 
-        // Profile tab → go to ProfileActivity
+        // Profile tab → goes to ProfileActivity
         LinearLayout tabProfile = findViewById(R.id.tabProfile);
         tabProfile.setOnClickListener(v -> {
-            // TODO: replace with your actual ProfileActivity
-            Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ProfileActivity.class);
+            startActivity(intent);
         });
     }
 }

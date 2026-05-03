@@ -45,9 +45,12 @@ public class UploadReportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_report);
 
-        // ── Back arrow ─────────────────────────────────────────────
-        // Goes back to the previous screen
-        findViewById(R.id.ivBack).setOnClickListener(v -> finish());
+        // Back arrow → always goes back to HomeActivity
+        findViewById(R.id.ivBack).setOnClickListener(v -> {
+            Intent intent = new Intent(this, HomeActivity.class);
+            startActivity(intent);
+            finish(); // closes UploadReportActivity so it doesn't stay in back stack
+        });
 
         // ── Upload box tap ─────────────────────────────────────────
         // Opens file picker when user taps the dashed upload area
