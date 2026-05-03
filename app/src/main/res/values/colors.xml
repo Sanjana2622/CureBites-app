@@ -16,4 +16,27 @@
     <color name="cb_bg_light">#F8F8F8</color>
     <color name="cb_text_main">#333333</color>
     <color name="cb_discount_red">#E57373</color>
+
+    <!-- Primary Brand Colors -->
+    <color name="home_header_green">#00875A</color> <!-- Main green for header, buttons, and nav -->
+    <color name="step_indicator_yellow">#FFEE58</color> <!-- Yellow for the "How It Works" step circles -->
+
+    <!-- Backgrounds -->
+    <color name="page_background_gray">#F5F5F5</color> <!-- Light gray background for the main body -->
+    <color name="card_white">#FFFFFF</color> <!-- Background for action cards -->
+
+    <!-- Typography -->
+    <color name="text_primary_dark">#333333</color> <!-- For bold titles like "Meal Plans" and "Calories" -->
+    <color name="text_secondary_gray">#757575</color> <!-- For labels like "Streak" and subtitles -->
+    <color name="text_white">#FFFFFF</color> <!-- For "Hello Priya!" and button text -->
+
+    <!-- Navigation States -->
+    <color name="nav_active">#00875A</color> <!-- Active "Home" text color -->
+    <color name="nav_inactive">#757575</color> <!-- Inactive gray for other nav items -->
+
+    <!-- Tag/Detail Colors (From previous page) -->
+    <color name="tag_orange_bg">#FFF3E0</color> <!-- Background for Gluten Free -->
+    <color name="tag_orange_text">#E65100</color> <!-- Text for Gluten Free -->
+    <color name="tag_green_bg">#E8F5E9</color> <!-- Background for High Fibre -->
+    <color name="tag_green_text">#2E7D32</color> <!-- Text for High Fibre -->
 </resources>
