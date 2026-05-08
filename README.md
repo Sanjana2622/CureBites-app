@@ -5,7 +5,7 @@
 <img src="https://img.shields.io/badge/Firebase-Authentication-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
 <img src="https://img.shields.io/badge/IDE-Android%20Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white"/>
 
-# 🥗 CureBites
+# CureBites
 
 ### Smart Health Meal App for Android
 
@@ -15,50 +15,50 @@
 
 ---
 
-## 📖 About
+## About
 
 **CureBites** is an Android application that helps users take control of their health through personalized meal planning, direct access to nutritionists, and a seamless healthy food ordering system. The app delivers a complete end-to-end user journey — from onboarding to real-time order tracking — all within a clean and intuitive interface.
 
 ---
 
-## ✨ Features
+## Features
 
 | Feature | Description |
 |---|---|
-| 🔐 **Authentication** | Secure Firebase Email/Password Login & Signup |
-| 🧑‍⚕️ **Nutritionist Connect** | Browse profiles and chat with certified nutritionists |
-| 🥗 **Meal Plans** | Personalized plans with calendar-based scheduling |
-| 🛒 **Food Ordering** | Browse healthy meals, add to cart, and checkout |
-| 📦 **Order Tracking** | Live order status with step-by-step tracking UI |
-| 📊 **Progress Monitoring** | Track your health journey over time |
-| 🔔 **Notifications** | Stay updated with reminders and alerts |
-| 📤 **Report Upload** | Upload and manage your health documents |
+|  **Authentication** | Secure Firebase Email/Password Login & Signup |
+|  **Nutritionist Connect** | Browse profiles and chat with certified nutritionists |
+|  **Meal Plans** | Personalized plans with calendar-based scheduling |
+|  **Food Ordering** | Browse healthy meals, add to cart, and checkout |
+|  **Order Tracking** | Live order status with step-by-step tracking UI |
+|  **Progress Monitoring** | Track your health journey over time |
+|  **Notifications** | Stay updated with reminders and alerts |
+|  **Report Upload** | Upload and manage your health documents |
 
 ---
 
-## 🚀 App Flow
+## App Flow
 
 ```
 Splash Screen
     └── Onboarding (3 Screens)
             └── Login / Signup
                     └── Tell Us About Yourself
-                            └── 🏠 Home Dashboard
+                            └──  Home Dashboard
 ```
 
 **From the Home Dashboard, users can navigate to:**
 
-- 📤 Upload Reports
-- 🥗 Meal Plans & Ordering Flow
-- 👨‍⚕️ Nutritionist Consultation
-- 🛒 Order History
-- 📊 Progress Tracking
-- 🔔 Notifications
-- 👤 Profile
+-  Upload Reports
+-  Meal Plans & Ordering Flow
+-  Nutritionist Consultation
+-  Order History
+-  Progress Tracking
+-  Notifications
+-  Profile
 
 ---
 
-## 📱 Screens (22 Total)
+## Screens (22 Total)
 
 <details>
 <summary><b>🔐 Onboarding & Authentication (6 screens)</b></summary>
@@ -113,25 +113,49 @@ Splash Screen
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
-| Splash Screen | Onboarding | Login |
-|:---:|:---:|:---:|
-| *(Add image)* | *(Add image)* | *(Add image)* |
+###  Onboarding & Auth
 
-| Home Dashboard | Meal Plans | Order Tracking |
+| Splash Screen | Onboarding 1 | Onboarding 2 | Onboarding 3 |
+|:---:|:---:|:---:|:---:|
+| <img src="screenshots/splash.png" width="180"/> | <img src="screenshots/onboarding1.png" width="180"/> | <img src="screenshots/onboarding2.png" width="180"/> | <img src="screenshots/onboarding3.png" width="180"/> |
+
+| Login / Signup | Tell Us About Yourself |
+|:---:|:---:|
+| <img src="screenshots/login.png" width="180"/> | <img src="screenshots/tell_us.png" width="180"/> |
+
+###  Dashboard & Meal Plans
+
+| Home Screen | Choose Plan | Meal Plan Calendar1 | Meal Plan Calendar2 | Recipe Details | 
+|:---:|:---:|:---:|:---:| :---:|
+| <img src="screenshots/home.png" width="180"/> | <img src="screenshots/choose_plan.png" width="180"/> | <img src="screenshots/meal_plan1.png" width="180"/> | <img src="screenshots/meal_plan2.png" width="180"/> | <img src="screenshots/recipe_details.png" width="180"/> |
+
+###  Ordering Flow
+
+| Add to Cart | Checkout | Order Placed | Order Tracking |
+|:---:|:---:|:---:|:---:|
+| <img src="screenshots/cart.png" width="180"/> | <img src="screenshots/checkout.png" width="180"/> | <img src="screenshots/order_placed.png" width="180"/> | <img src="screenshots/order_tracking.png" width="180"/> |
+
+###  Nutritionist & More
+
+| Nutritionist Profile | Chat | Order History | My Progress |
+|:---:|:---:|:---:|:---:|
+| <img src="screenshots/nutritionist_profile.png" width="180"/> | <img src="screenshots/chat.png" width="180"/> | <img src="screenshots/order_history.png" width="180"/> | <img src="screenshots/progress.png" width="180"/> |
+
+| Notifications | Profile | Upload Reports |
 |:---:|:---:|:---:|
-| *(Add image)* | *(Add image)* | *(Add image)* |
+| <img src="screenshots/notifications.png" width="180"/> | <img src="screenshots/profile.png" width="180"/> | <img src="screenshots/upload_reports.png" width="180"/> |
 
 ---
 
-## 🎨 UI/UX Design
+## UI/UX Design
 
-> 👉 **Figma Design:** *(#-https://www.figma.com/design/Q1Gjpd9VCcNt3eJMRNLId2/Cure-Bites-Design?node-id=0-1&t=f7Uyw1csNpZY1O5D-0)*
+>  **Figma Design:** *(#-https://www.figma.com/design/Q1Gjpd9VCcNt3eJMRNLId2/Cure-Bites-Design?node-id=0-1&t=f7Uyw1csNpZY1O5D-0)*
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Category | Technology |
 |---|---|
@@ -144,7 +168,7 @@ Splash Screen
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 **1. Clone the repository**
 ```bash
@@ -168,7 +192,7 @@ Use an emulator (API 24+) or connect a physical Android device
 
 ---
 
-## 🔑 Firebase Setup
+##  Firebase Setup
 
 1. Go to [Firebase Console](https://console.firebase.google.com/)
 2. Create a new project
@@ -187,17 +211,17 @@ CureBites/
 
 ---
 
-## 💡 Future Enhancements
+##  Future Enhancements
 
-- [ ] 💳 Payment Gateway Integration
-- [ ] 📍 Live Order Tracking with Google Maps
-- [ ] 🤖 AI-based Meal Recommendations
-- [ ] 📊 Advanced Health Analytics Dashboard
-- [ ] 🌙 Dark Mode Support
+- [ ]  Payment Gateway Integration
+- [ ]  Live Order Tracking with Google Maps
+- [ ]  AI-based Meal Recommendations
+- [ ]  Advanced Health Analytics Dashboard
+- [ ]  Dark Mode Support
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 **Sanjana Singh**
 
@@ -205,7 +229,7 @@ CureBites/
 
 ---
 
-## 🧠 Project Note
+##  Group Project Note 
 
 This project demonstrates a complete end-to-end Android application, integrating Firebase authentication, a personalized user onboarding experience, meal planning, and a food ordering system — all structured within a clean 22-screen UI design.
 
