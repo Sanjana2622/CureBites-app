@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * MealPlanTuesdayActivity
- *
  * This is the Tuesday version of the meal plan screen.
  * It shows:
  *   - Tuesday tab highlighted green
