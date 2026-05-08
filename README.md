@@ -11,8 +11,6 @@
 
 *Personalized meal plans · Expert nutritionist guidance · Healthy food ordering*
 
-[Figma Design](#-https://www.figma.com/design/Q1Gjpd9VCcNt3eJMRNLId2/Cure-Bites-Design?node-id=0-1&t=f7Uyw1csNpZY1O5D-0) · [🚀 Get Started](#-installation)
-
 </div>
 
 ---
