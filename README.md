@@ -129,7 +129,7 @@ Splash Screen
 
 | Home Screen | Choose Plan | Meal Plan Calendar1 | Meal Plan Calendar2 | Recipe Details | 
 |:---:|:---:|:---:|:---:| :---:|
-| <img src="screenshots/jpeg.png" width="180"/> | <img src="screenshots/choose_plan.jpeg" width="180"/> | <img src="screenshots/meal_plan1.jpeg" width="180"/> | <img src="screenshots/meal_plan2.jpeg" width="180"/> | <img src="screenshots/recipe_details.jpeg" width="180"/> |
+| <img src="screenshots/home.jpeg" width="180"/> | <img src="screenshots/choose_plan.jpeg" width="180"/> | <img src="screenshots/meal_plan1.jpeg" width="180"/> | <img src="screenshots/meal_plan2.jpeg" width="180"/> | <img src="screenshots/recipe_details.jpeg" width="180"/> |
 
 ###  Ordering Flow
 
