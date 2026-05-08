@@ -119,33 +119,33 @@ Splash Screen
 
 | Splash Screen | Onboarding 1 | Onboarding 2 | Onboarding 3 |
 |:---:|:---:|:---:|:---:|
-| <img src="screenshots/splash.png" width="180"/> | <img src="screenshots/onboarding1.png" width="180"/> | <img src="screenshots/onboarding2.png" width="180"/> | <img src="screenshots/onboarding3.png" width="180"/> |
+| <img src="screenshots/splash.jpeg" width="180"/> | <img src="screenshots/onboarding1.jpeg" width="180"/> | <img src="screenshots/onboarding2.jpeg" width="180"/> | <img src="screenshots/onboarding3.jpeg" width="180"/> |
 
 | Login / Signup | Tell Us About Yourself |
 |:---:|:---:|
-| <img src="screenshots/login.png" width="180"/> | <img src="screenshots/tell_us.png" width="180"/> |
+| <img src="screenshots/login.jpeg" width="180"/> | <img src="screenshots/tell_us.jpeg" width="180"/> |
 
 ###  Dashboard & Meal Plans
 
 | Home Screen | Choose Plan | Meal Plan Calendar1 | Meal Plan Calendar2 | Recipe Details | 
 |:---:|:---:|:---:|:---:| :---:|
-| <img src="screenshots/home.png" width="180"/> | <img src="screenshots/choose_plan.png" width="180"/> | <img src="screenshots/meal_plan1.png" width="180"/> | <img src="screenshots/meal_plan2.png" width="180"/> | <img src="screenshots/recipe_details.png" width="180"/> |
+| <img src="screenshots/jpeg.png" width="180"/> | <img src="screenshots/choose_plan.jpeg" width="180"/> | <img src="screenshots/meal_plan1.jpeg" width="180"/> | <img src="screenshots/meal_plan2.jpeg" width="180"/> | <img src="screenshots/recipe_details.jpeg" width="180"/> |
 
 ###  Ordering Flow
 
 | Add to Cart | Checkout | Order Placed | Order Tracking |
 |:---:|:---:|:---:|:---:|
-| <img src="screenshots/cart.png" width="180"/> | <img src="screenshots/checkout.png" width="180"/> | <img src="screenshots/order_placed.png" width="180"/> | <img src="screenshots/order_tracking.png" width="180"/> |
+| <img src="screenshots/cart.jpeg" width="180"/> | <img src="screenshots/checkout.jpeg" width="180"/> | <img src="screenshots/order_placed.jpeg" width="180"/> | <img src="screenshots/order_tracking.jpeg" width="180"/> |
 
 ###  Nutritionist & More
 
 | Nutritionist Profile | Chat | Order History | My Progress |
 |:---:|:---:|:---:|:---:|
-| <img src="screenshots/nutritionist_profile.png" width="180"/> | <img src="screenshots/chat.png" width="180"/> | <img src="screenshots/order_history.png" width="180"/> | <img src="screenshots/progress.png" width="180"/> |
+| <img src="screenshots/nutritionist_profile.jpeg" width="180"/> | <img src="screenshots/chat.jpeg" width="180"/> | <img src="screenshots/order_history.jpeg" width="180"/> | <img src="screenshots/progress.jpeg" width="180"/> |
 
 | Notifications | Profile | Upload Reports |
 |:---:|:---:|:---:|
-| <img src="screenshots/notifications.png" width="180"/> | <img src="screenshots/profile.png" width="180"/> | <img src="screenshots/upload_reports.png" width="180"/> |
+| <img src="screenshots/notifications.jpeg" width="180"/> | <img src="screenshots/profile.jpeg" width="180"/> | <img src="screenshots/upload_reports.jpeg" width="180"/> |
 
 ---
 
