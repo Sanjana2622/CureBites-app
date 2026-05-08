@@ -11,7 +11,7 @@
 
 *Personalized meal plans · Expert nutritionist guidance · Healthy food ordering*
 
-[🎨 Figma Design](#-uiux-design) · [🚀 Get Started](#-installation)
+[Figma Design](#-https://www.figma.com/design/Q1Gjpd9VCcNt3eJMRNLId2/Cure-Bites-Design?node-id=0-1&t=f7Uyw1csNpZY1O5D-0) · [🚀 Get Started](#-installation)
 
 </div>
 
@@ -129,7 +129,7 @@ Splash Screen
 
 ## 🎨 UI/UX Design
 
-> 👉 **Figma Design:** *(Add your Figma link here)*
+> 👉 **Figma Design:** *(#-https://www.figma.com/design/Q1Gjpd9VCcNt3eJMRNLId2/Cure-Bites-Design?node-id=0-1&t=f7Uyw1csNpZY1O5D-0)*
 
 ---
 
@@ -187,11 +187,6 @@ CureBites/
 
 ---
 
-## 📦 APK
-
-> 🚧 **APK not available yet** — the app is currently in development.
-> Once released, the download link will be added here.
-
 ---
 
 ## 💡 Future Enhancements
@@ -208,7 +203,7 @@ CureBites/
 
 **Sanjana Singh**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github)](https://github.com/your-username)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat&logo=github)](https://github.com/Sanjana2622)
 
 ---
 
